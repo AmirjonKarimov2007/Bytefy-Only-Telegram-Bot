@@ -63,7 +63,7 @@ async def handle_finalize_selection(callback_query: CallbackQuery):
     for i, service in enumerate(selected_services, 1):
         services[i] = {"name": service}
 
-    # PDF yaratish va foydalanuvchiga xizmatlar ro'yxatini yuborish
+    # PDF yaratish va foydalanuvchiga xizmatalar ro'yxatini yuborish
     pdf_path = rf"invoyslar/{callback_query.from_user.id}.pdf"
     pdf = await create_pdf(pdf_path, services, callback_query.from_user.first_name, callback_query.from_user.last_name, "Amirjon Karimov")
     with open(pdf_path, 'rb') as pdf_file:
