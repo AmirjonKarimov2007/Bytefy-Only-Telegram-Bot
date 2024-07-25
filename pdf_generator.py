@@ -15,7 +15,7 @@ async def create_pdf(output_path, services, ism_familiya, sharif,registrant):
                 f"{sharif}” GA TAKLIF ETILGAN XIZMATLAR\n"
                 "RO’YXATI")
     
-    c.drawImage(r"/home/amirjon/Telegram_Channels_Bot/Bytefy-Company-Telegram-Bot/bot/pdfconvertor.png", 0, 0, width, height)
+    c.drawImage(r"pdfconvertor.png", 0, 0, width, height)
     
     c.setFont("Helvetica-Bold", 12)
 

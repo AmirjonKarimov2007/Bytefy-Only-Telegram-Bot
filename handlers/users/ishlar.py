@@ -64,7 +64,7 @@ async def handle_finalize_selection(callback_query: CallbackQuery):
         services[i] = {"name": service}
 
     # PDF yaratish va foydalanuvchiga xizmatlar ro'yxatini yuborish
-    pdf_path = rf"/home/amirjon/Telegram_Channels_Bot/Bytefy-Company-Telegram-Bot/invoyslar/{callback_query.from_user.id}.pdf"
+    pdf_path = rf"invoyslar/{callback_query.from_user.id}.pdf"
     pdf = await create_pdf(pdf_path, services, callback_query.from_user.first_name, callback_query.from_user.last_name, "Amirjon Karimov")
     with open(pdf_path, 'rb') as pdf_file:
         await bot.send_document(
